@@ -1,5 +1,11 @@
 # ha-vanlife
 
+Allows to integrate E-Bikes from manufacturers: Vanpowers & Muon
+
+Verified with:
+
+- Muon Fermion Ultra
+
 > [!WARNING]
 > **Unofficial & Cloud-Based**
 > This integration uses Vanebike's cloud services (REST). It is unofficial and not affiliated with Vanebike. Because it relies on reverse-engineered cloud APIs (decompiled [Android app](https://play.google.com/store/apps/details?id=com.swei.aioteu)), any changes on the cloud side could break functionality.
