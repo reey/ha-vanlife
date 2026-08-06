@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "VanLife (Vanebike)",
+        "description": "Connect your Vanebike account.",
+        "data": {
+          "email": "Email address",
+          "password": "Password",
+          "base_url": "API base URL"
+        },
+        "data_description": {
+          "base_url": "Change only if you use a non-EU region server."
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid email or password.",
+      "cannot_connect": "Unable to reach the API. Check the base URL and your network."
+    },
+    "abort": {
+      "already_configured": "This account is already configured."
+    }
+  }
+}

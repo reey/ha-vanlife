@@ -1,0 +1,9 @@
+{
+  "domain": "vanlife",
+  "name": "VanLife (Vanebike)",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://github.com/reey/ha-vanlife",
+  "iot_class": "cloud_polling",
+  "version": "1.0.0"
+}
