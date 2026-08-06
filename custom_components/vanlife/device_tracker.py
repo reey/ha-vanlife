@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+from datetime import datetime, timezone
 from typing import Any
 
 from homeassistant.components.device_tracker import SourceType, TrackerEntity
@@ -114,7 +115,12 @@ class VanLifeTrackerEntity(CoordinatorEntity[VanLifeCoordinator], TrackerEntity)
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
         pos = self._position or {}
-        timestamp = pos.get("timestamp")
+        raw_ts = pos.get("timestamp")
+        timestamp = (
+            datetime.fromtimestamp(raw_ts, tz=timezone.utc).isoformat()
+            if raw_ts is not None
+            else None
+        )
         return {
             "is_moving": self._data.get("is_moving", False),
             "order_id": self._device.get("order_id"),
